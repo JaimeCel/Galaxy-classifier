@@ -1,42 +1,37 @@
-# 🌌 Galaxy Classification
+# Galaxy Classification
 
 Classify galaxies as **central** or **satellite** within dark matter halos using a **Random Forest** model.  
-This project applies key astrophysical features to study galaxy structure and evolution.
+This project use data from a mock catalogue build from Euclid data. 
 
 ---
 
-## 🔭 Overview
+## Overview
 - Supervised classification using `scikit-learn`.  
-- Core features used:
+- Ffeatures used:
   - `z_cgal` – redshift  
   - `metallicity` – 12 + log(O/H)  
   - `lmhalo` – log of halo mass  
   - `lml_r` – mass-to-light ratio  
   - `lsfr` – log of star formation rate  
-  - `gr_gal` – color index (g−r)  
+  - `gr_gal` – color index (g−r)
+  - Imstellar: mass of the galaxy
 - Removed redundant or low-importance variables such as magnitudes and velocities.
 
 ---
 
-## ⚙️ Workflow
-1. Data cleaning and exploration  
-2. Feature selection and engineering  
-3. Balanced train/test split considering halo sizes  
+## ⚙️ Workflow 
+2. Feature selection 
+3. Balanced train/test split considering galaxies from same halos.  
 4. Model training with a Random Forest Classifier  
-5. Evaluation through accuracy and feature importance  
+5. Evaluation through metrics and feature importance  
 
 ---
 
 ## 📊 Results
 - Achieved strong accuracy distinguishing **central** vs **satellite** galaxies.  
-- Most influential factors: `lmhalo`, `lsfr`, and `gr_gal`.
-
----
-
-## 💻 Tools
-Python • pandas • numpy • matplotlib • scikit-learn • Jupyter  
+- Most influential features: `lmhalo`, `Imstellar`.
 
 ---
 
 ## 🌠 Notes
-You can open the notebook directly in Jupyter or any notebook interface to explore the data, run the model, and view the visualizations interactively.
+I save the data in a google drive folder. I fu want to download it i link here : https://drive.google.com/file/d/1Z9YyuZSNVbWEV0S2HT1GRVama11JNr8R/view?usp=drive_link
