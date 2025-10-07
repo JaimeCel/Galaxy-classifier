@@ -7,7 +7,7 @@ This project use data from a mock catalogue build from Euclid data.
 
 ## Overview
 - Supervised classification using `scikit-learn`.  
-- Ffeatures used:
+- Features used:
   - `z_cgal` – redshift  
   - `metallicity` – 12 + log(O/H)  
   - `lmhalo` – log of halo mass  
@@ -28,7 +28,7 @@ This project use data from a mock catalogue build from Euclid data.
 ---
 
 ##  Results
-- Achieved strong accuracy distinguishing **central** vs **satellite** galaxies.  
+- The model achieves good accuracy distinguishing **central** vs **satellite** galaxies.  
 - Most influential features: `lmhalo`, `Imstellar`.
 
 ---
