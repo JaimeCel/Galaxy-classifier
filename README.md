@@ -1,7 +1,6 @@
 # Galaxy Classification
 
-Classify galaxies as **central** or **satellite** within dark matter halos using a **Random Forest** model.  
-This project use data from a mock catalogue build from Euclid data. 
+Galaxies don't exist in isolation — they live inside invisible clouds of dark matter called halos. Some galaxies sit at the centre of their halo (central), others orbit around them (satellite). This project builds a machine learning model that classifies which type a galaxy is, based on observable properties like its mass, color, and star formation rate.
 
 ---
 
