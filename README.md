@@ -30,5 +30,5 @@ pip install pandas scikit-learn matplotlib seaborn
 
 ## Data
 
-Mock catalogue built from Euclid data, available via [CosmoHub](https://cosmohub.pic.es/).  
-A copy is available [here](https://drive.google.com/uc?id=1Z9YyuZSNVbWEV0S2HT1GRVama11JNr8R).
+Data [Drive](https://drive.google.com/uc?id=1Z9YyuZSNVbWEV0S2HT1GRVama11JNr8R).  
+
