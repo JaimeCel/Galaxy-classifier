@@ -16,7 +16,7 @@ Galaxies don't exist in isolation — they live inside invisible clouds of dark 
 ## Results
 
 ROC-AUC of $\mathbf{0.98}$, precision and recall above $0.94$ for both classes.  
-The most influential features are halo mass $\log_{10}(M_\mathrm{halo})$ and stellar mass $\log_{10}(M_*)$, which aligns with physical expectations — more massive halos host more satellites, and more massive galaxies tend to be centrals.
+The most influential features are halo mass and stellar mass, which aligns with physical expectations — more massive halos host more satellites, and more massive galaxies tend to be centrals.
 
 ---
 
@@ -31,4 +31,4 @@ pip install pandas scikit-learn matplotlib seaborn
 ## Data
 
 Mock catalogue built from Euclid data, available via [CosmoHub](https://cosmohub.pic.es/).  
-A copy is available [here](https://drive.google.com/uc?id=1Z9YyuZSNVbWEV0S2HT1GRVama11JNr8R) (large file — use `gdown` to download).
+A copy is available [here](https://drive.google.com/uc?id=1Z9YyuZSNVbWEV0S2HT1GRVama11JNr8R).
