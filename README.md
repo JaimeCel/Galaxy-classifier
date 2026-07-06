@@ -4,33 +4,31 @@ Galaxies don't exist in isolation — they live inside invisible clouds of dark 
 
 ---
 
-## Overview
-- Supervised classification using `scikit-learn`.  
-- Features used:
-  - `z_cgal` – redshift  
-  - `metallicity` – 12 + log(O/H)  
-  - `lmhalo` – log of halo mass  
-  - `lml_r` – mass-to-light ratio  
-  - `lsfr` – log of star formation rate  
-  - `gr_gal` – color index (g−r)
-  - `Imstellar`: mass of the galaxy
-- Removed redundant or low-importance variables.
+## Workflow
+
+- **Halo-aware train/test split** — galaxies from the same halo are never split across sets, preventing data leakage
+- **Random Forest classifier** with hyperparameter tuning via `RandomizedSearchCV` (20 combinations, 3-fold cross-validation)
+- Evaluation through classification metrics, confusion matrix, and ROC curve
+- Feature importance analysis
 
 ---
 
-##  Workflow 
-- Feature selection
-- Balanced train/test split considering galaxies from same halos.  
-- Model training with a Random Forest Classifier  
-- Evaluation through metrics and feature importance 
+## Results
+
+ROC-AUC of $\mathbf{0.98}$, precision and recall above $0.94$ for both classes.  
+The most influential features are halo mass $\log_{10}(M_\mathrm{halo})$ and stellar mass $\log_{10}(M_*)$, which aligns with physical expectations — more massive halos host more satellites, and more massive galaxies tend to be centrals.
 
 ---
 
-##  Results
-- The model achieves good accuracy distinguishing **central** vs **satellite** galaxies.  
-- Most influential features: `lmhalo`, `Imstellar`.
+## Requirements
+
+```bash
+pip install pandas scikit-learn matplotlib seaborn
+```
 
 ---
 
-##  Notes
-The dataset is stored in a Google Drive folder for size issues. You can download it from this link [Dataset](https://drive.google.com/file/d/1Z9YyuZSNVbWEV0S2HT1GRVama11JNr8R/view?usp=drive_link)
+## Data
+
+Mock catalogue built from Euclid data, available via [CosmoHub](https://cosmohub.pic.es/).  
+A copy is available [here](https://drive.google.com/uc?id=1Z9YyuZSNVbWEV0S2HT1GRVama11JNr8R) (large file — use `gdown` to download).
